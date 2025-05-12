@@ -33,6 +33,9 @@ Este projeto é uma API Node.js com integração a um Front-end HTML/CSS/JavaScr
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
 
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+
 ### Instale as depedências 
 npm install
 
@@ -43,9 +46,7 @@ MONGO_URI=sua_string_de_conexao_do_mongodb
 JWT_SECRET=sua_chave_secreta
 
 4. Inicie o Servidor
-bash
-Copiar
-Editar
+
 npm run dev
 
 🌐 Acessar o Front-end
@@ -57,7 +58,6 @@ http://localhost:3000
 Apenas usuários autenticados conseguem:
 
 Listar usuários
-
 Ver perfil
 
 Apenas administradores conseguem:
@@ -72,8 +72,8 @@ Sinta-se livre para usar e contribuir.
 Contribuições são bem-vindas!
 Abra uma issue ou envie um pull request.
 
-
 📌 **Troque** `seu-usuario/seu-repositorio` pelo seu GitHub.
+
 
 
 
