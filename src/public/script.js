@@ -11,6 +11,15 @@ function showRegister() {
   usuariosContainer.classList.add('hidden');
 }
 
+function logout() {
+  localStorage.removeItem('token');
+  formContainer.classList.remove('hidden');
+  registerContainer.classList.add('hidden');
+  usuariosContainer.classList.add('hidden');
+  perfilContainer.classList.add('hidden');
+}
+
+
 function showLogin() {
   formContainer.classList.remove('hidden');
   registerContainer.classList.add('hidden');
