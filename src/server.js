@@ -1,16 +1,20 @@
 import express from 'express';
+import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import usuariosRoutes from '../routes/usuariosRoutes.js'
 import { conectaNoBanco } from '../config/db.js'
-import cors from 'cors';
+
 
 dotenv.config();
 await conectaNoBanco();
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://api-user-livid.vercel.app/'
+}));
 
 // Resolver __dirname para ESModules
 const __filename = fileURLToPath(import.meta.url);
