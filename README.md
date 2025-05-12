@@ -75,5 +75,5 @@ Abra uma issue ou envie um pull request.
 
 📌 **Troque** `seu-usuario/seu-repositorio` pelo seu GitHub.
 
-Deseja que eu gere uma **versão em inglês** também?
+
 
