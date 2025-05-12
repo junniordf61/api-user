@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Usuários - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="formContainer">
+  <h2>Login</h2>
+  <input type="email" id="loginEmail" placeholder="Email">
+  <input type="password" id="loginSenha" placeholder="Senha">
+  <button id="loginBtn">LOGIN</button>
+  <p onclick="showRegister()">Não sou cadastrado?</p>
+
+  <button onclick="showUsuarios()" style="margin-top: 15px;">Listar Usuários</button>
+  <button onclick="verPerfil()" style="margin-top: 15px;">Ver Meu Perfil</button>
+  </div>
+
+
+  <div class="container hidden" id="registerContainer">
+    <h2>Cadastro</h2>
+    <input type="text" id="registerNome" placeholder="Nome">
+    <input type="email" id="registerEmail" placeholder="Email">
+    <input type="password" id="registerSenha" placeholder="Senha">
+    <button id="registerBtn">Cadastrar</button>
+    <p onclick="showLogin()">Já tenho uma conta</p>
+  </div>
+
+  <div class="container hidden" id="usuariosContainer">
+    <h2>Usuários</h2>
+    <button id="listarUsuarios">Listar</button>
+    <ul id="listaUsuarios"></ul>
+    <button onclick="showLogin()">Voltar</button>
+  </div>
+
+  <div class="container hidden" id="perfilContainer">
+  <h2>Meu Perfil</h2>
+  <div id="perfilInfo"></div>
+  <button onclick="showLogin()">Sair</button>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
