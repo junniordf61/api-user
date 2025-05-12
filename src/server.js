@@ -1,11 +1,10 @@
-import cors from 'cors';
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import usuariosRoutes from '../routes/usuariosRoutes.js'
 import { conectaNoBanco } from '../config/db.js'
-
+import cors from 'cors';
 
 dotenv.config();
 await conectaNoBanco();
