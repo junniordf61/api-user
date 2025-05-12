@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -5,10 +6,12 @@ import dotenv from 'dotenv';
 import usuariosRoutes from '../routes/usuariosRoutes.js'
 import { conectaNoBanco } from '../config/db.js'
 
+
 dotenv.config();
 await conectaNoBanco();
 
 const app = express();
+app.use(cors());
 
 // Resolver __dirname para ESModules
 const __filename = fileURLToPath(import.meta.url);

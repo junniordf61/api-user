@@ -1,3 +1,6 @@
+const API_URL = 'https://api-user-zzka.onrender.com/usuarios';
+
+
 const formContainer = document.getElementById('formContainer');
 const registerContainer = document.getElementById('registerContainer');
 const usuariosContainer = document.getElementById('usuariosContainer');
@@ -34,7 +37,7 @@ document.getElementById('loginBtn').onclick = async function () {
 
   if (!email || !senha) return alert('Preencha todos os campos.');
 
-  const res = await fetch('/usuarios/login', {
+  const res = await fetch('/https://api-user-zzka.onrender.com/usuarios/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, senha })
@@ -58,7 +61,7 @@ document.getElementById('registerBtn').onclick = async function () {
 
   if (!nome || !email || !senha) return alert('Preencha todos os campos.');
 
-  const res = await fetch('/usuarios', {
+  const res = await fetch('https://api-user-zzka.onrender.com/usuarios', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ nome, email, senha })
@@ -74,7 +77,7 @@ document.getElementById('listarUsuarios').addEventListener('click', listarUsuari
 
 async function listarUsuarios() {
   const token = localStorage.getItem('token');
-  const res = await fetch('/usuarios', {
+  const res = await fetch('/https://api-user-zzka.onrender.com/usuarios', {
     headers: { 'Authorization': `Bearer ${token}` }
   });
 
@@ -92,7 +95,7 @@ async function listarUsuarios() {
 async function verPerfilAposLogin() {
   const token = localStorage.getItem('token');
 
-  const res = await fetch('/usuarios/perfil', {
+  const res = await fetch('/https://api-user-zzka.onrender.com/usuarios/perfil', {
     headers: { 'Authorization': `Bearer ${token}` }
   });
 
@@ -128,7 +131,7 @@ async function verPerfil() {
     return;
   }
 
-  const res = await fetch('/usuarios/perfil', {
+  const res = await fetch('/https://api-user-zzka.onrender.com/usuarios/perfil', {
     headers: { 'Authorization': `Bearer ${token}` }
   });
 
@@ -149,7 +152,7 @@ async function verAdminDashboard() {
     return;
   }
 
-  const res = await fetch('/usuarios/admin/dashboard', {
+  const res = await fetch('/https://api-user-zzka.onrender.com/usuarios/admin/dashboard', {
     headers: { 'Authorization': `Bearer ${token}` }
   });
 
